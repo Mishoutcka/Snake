@@ -70,6 +70,7 @@ namespace Snake
             if (head.IsHit(food))
             {
                 food.sym = head.sym;
+                food.Draw();
                 pList.Add(food);
                 return true;
             }
