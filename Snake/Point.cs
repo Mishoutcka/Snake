@@ -55,9 +55,9 @@ namespace Snake
             return p.x == this.x && p.y == this.y;
         }
 
-        public bool IsFoodInSnake()
+        public bool IsSnakeEatFood(Point p)
         {
-            return '*' == this.sym;
+            return p.x == this.x && p.y == this.y && p.sym != this.sym;
         }
 
         public void Clear()

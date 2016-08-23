@@ -25,21 +25,9 @@ namespace Snake
         {
             int x;
             int y;
-            int i = 0;
 
             x = random.Next(2, mapWidht - 2);
             y = random.Next(2, mapHeight - 2);
-            Point p = new Point(x, y, sym);
-            while(true)
-            {
-                if (p.IsFoodInSnake())
-                {
-                    x = random.Next(2, mapWidht - 2);
-                    y = random.Next(2, mapHeight - 2);
-                    i++;
-                }
-                else break;
-            }
             return new Point(x, y, sym);
         }
     }

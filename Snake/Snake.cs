@@ -67,7 +67,7 @@ namespace Snake
         public bool Eat(Point food)
         {
             Point head = GetNextPoint();
-            if (head.IsHit(food))
+            if (head.IsSnakeEatFood(food))
             {
                 food.sym = head.sym;
                 food.Draw();
