@@ -55,16 +55,21 @@ namespace Snake
             return p.x == this.x && p.y == this.y;
         }
 
-        public void Draw()
+        public bool IsFoodInSnake()
         {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
+            return '*' == this.sym;
         }
 
         public void Clear()
         {
             sym = ' ';
             Draw();
+        }
+
+        public void Draw()
+        {
+            Console.SetCursorPosition(x,y);
+            Console.Write(sym);
         }
 
         public override string ToString()
